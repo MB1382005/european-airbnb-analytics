@@ -1,0 +1,17 @@
+# Local data and report files
+*.csv
+*.pbix
+*.pbit
+*.mp4
+*.bak
+*.mdf
+*.ldf
+*.abf
+.env
+.env.*
+!.env.example
+*.user
+*.suo
+.vs/
+.pbi/
+local-review-only/

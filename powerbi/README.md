@@ -1,0 +1,1 @@
+The original Air.pbix is supplied separately in local-review-only/powerbi. It contains an embedded data model. Review its data and source settings before publishing it. The public screenshots are in ../docs/screenshots.

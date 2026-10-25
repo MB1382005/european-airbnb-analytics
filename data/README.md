@@ -1,0 +1,1 @@
+Place the original 20 CSV files here for local reference, or in the SQL Server import folder. CSV files are ignored by Git. The original source URL and redistribution terms are not yet recorded. See ../docs/data-inventory.md.
