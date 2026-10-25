@@ -1,6 +1,4 @@
 # Local data and report files
-*.csv
-*.pbix
 *.pbit
 *.mp4
 *.bak

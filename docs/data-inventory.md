@@ -27,4 +27,4 @@ Counts were read from the supplied CSV files, excluding headers. They are not SQ
 
 Total: 51,707 observations.
 
-Columns include prices, room types, capacity, ratings, host status, distances, attraction/restaurant indices and coordinates. No names, email addresses or phone fields appear in the CSV headers. Coordinates remain location data and are excluded from the public package with the other raw records.
+Columns include prices, room types, capacity, ratings, host status, distances, attraction/restaurant indices and coordinates. No names, email addresses or phone fields appear in the CSV headers. The original files include latitude and longitude fields.

@@ -17,7 +17,7 @@ Each row is a source observation. Weekday and weekend records should not be trea
 - Flagged price outliers using IQR within each city and room type.
 - Created a reporting view and a three-page Power BI report.
 
-The flow is: CSV files → Bronze → Silver → Gold → Power BI.
+The flow is: CSV files â†’ Bronze â†’ Silver â†’ Gold â†’ Power BI.
 
 ## Dashboard
 
@@ -38,22 +38,22 @@ These are frames from my demo recording. The filters shown in each image affect 
 sql/                 Setup, loading, validation and reporting queries
 docs/screenshots/    Report screenshots
 docs/                Model, data inventory and setup notes
-data/                Instructions for adding the source CSV files
-powerbi/             Instructions for opening the local report
+data/                Original 20 source CSV files
+powerbi/             Power BI report (Air.pbix)
 ```
 
 ## Run the project
 
 1. Use SQL Server 2017 or later and SQL Server Management Studio.
-2. Put the 20 CSV files in `C:\AirbnbData\`, or change the two paths in `sql/01-bronze-import.sql`. SQL Server needs read access to that folder on the server machine.
+2. Copy the 20 CSV files from `data/` into `C:\AirbnbData\`, or change the two paths in `sql/01-bronze-import.sql`. SQL Server needs read access to that folder on the server machine.
 3. Run `00-setup.sql`, then the remaining SQL files in numerical order against a new project database.
 4. Check the validation results before moving to the next layer. The Bronze loader prints import errors and continues, so check all 20 tables were loaded.
-5. Open the local `Air.pbix` in Power BI Desktop. Check its data source settings and update local connections before refreshing. `GOLD.vw_AirbnbMaster` is the reporting view supplied here.
+5. Open [`powerbi/Air.pbix`](powerbi/Air.pbix) in Power BI Desktop. Check its data source settings and update local connections before refreshing. `GOLD.vw_AirbnbMaster` is the reporting view supplied here.
 
 The SQL scripts were reviewed as files; they have not been executed against SQL Server as part of preparing this repository. See [setup notes](docs/setup-notes.md) before rerunning them.
 
 ## Data availability
 
-Raw CSV files and the PBIX are kept outside this public repository for now. The original dataset link and redistribution terms still need to be added. The PBIX also contains an embedded data model, so it needs the same review as the source data before sharing.
+The [20 original CSV files](data/) and the [Power BI report](powerbi/Air.pbix) are included in this repository. Download the report and open it in Power BI Desktop. The original dataset source link and redistribution terms have not yet been documented.
 
 Prices use the source `realSum` field. Currency, collection dates and the pricing period still need to be confirmed from the original dataset documentation.
